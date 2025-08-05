@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
-import CustomInput from "./src/components/CustomInput";
-import CustomButton from "./src/components/Custombutton";
+import CustomInput from "@/components/CustomInput";
+import CustomButton from "@/components/Custombutton";
 // react-hok-form
 import { useForm } from "react-hook-form";
 import {
