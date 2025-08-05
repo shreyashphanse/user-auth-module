@@ -9,6 +9,9 @@ export default function Index() {
       <Link href={"/sign-in"} style={styles.goto1}>
         Go to Sign-in
       </Link>
+      <Link href={"/(protected)"} style={styles.goto1}>
+        Go to Protected Screens
+      </Link>
     </View>
   );
 }
