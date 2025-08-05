@@ -40,7 +40,7 @@ export default function App() {
     control,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<SignInFeilds>({
     // defaultValues: {
     //   email: "abc@gmail.com",
     //   password: "",
