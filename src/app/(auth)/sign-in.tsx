@@ -12,6 +12,7 @@ import {
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Link } from "expo-router";
+import { useAuth } from "@/providers/AuthProvider";
 
 // zod var
 const signInSchema = z.object({
@@ -31,10 +32,14 @@ const signInSchema = z.object({
 type SignInFeilds = z.infer<typeof signInSchema>;
 
 export default function SignInScreen() {
+  const { signIn } = useAuth();
+
   // onPressed function
   const onSign_in = (data: SignInFeilds) => {
     console.log("Signed-in", data.email, data.password);
+    signIn();
   };
+
   // controller
   const {
     control,

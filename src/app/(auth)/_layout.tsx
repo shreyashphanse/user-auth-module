@@ -1,7 +1,15 @@
-import { Slot, Stack } from "expo-router";
+import { useAuth } from "@/providers/AuthProvider";
+import { Redirect, Slot, Stack } from "expo-router";
 
 export default function AuthLayout() {
   console.log("Auth Layout");
+
+  const { isAuthenticated } = useAuth();
+  if (isAuthenticated) {
+    console.log("already signed-in");
+    return <Redirect href={"/"} />;
+  }
+
   return (
     <Stack>
       <Stack.Screen

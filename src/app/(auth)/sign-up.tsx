@@ -79,12 +79,12 @@ export default function SignUpScreen() {
           keyboardType="default"
         />
 
-        <CustomInput
+        {/* <CustomInput
           control={control}
           name="age"
           placeholder="Age"
           keyboardType="number-pad"
-        />
+        /> */}
       </View>
       <CustomButton text="Sign-Up" onPress={handleSubmit(onSign_up)} />
       <Link href={"/sign-in"} style={styles.goto1}>
